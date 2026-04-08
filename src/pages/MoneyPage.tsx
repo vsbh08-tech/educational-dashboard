@@ -655,7 +655,7 @@ export const MoneyPage = () => {
       <div className="panel">
         <div className="grid" style={{ gap: 12 }}>
           <DateRange start={range.start} end={range.end} onChange={setRange} />
-          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
+          <div className="grid money-filters">
             <Select
               label="Счет"
               value={filters.account}

@@ -620,26 +620,37 @@ export const MoneyPage = () => {
       ]
     };
 
+    const maxExpenseItems = 10;
+    const expenseItems = [...expenseStructure].sort((a, b) => b.value - a.value);
+    const expenseHead = expenseItems.slice(0, maxExpenseItems);
+    const expenseTail = expenseItems.slice(maxExpenseItems);
+    const expenseOther = expenseTail.reduce((acc, item) => acc + item.value, 0);
+    const expenseData = expenseOther > 0 ? [...expenseHead, { label: 'Прочее', value: expenseOther }] : expenseHead;
+
     const expenseOption: EChartsOption = {
       tooltip: {
         trigger: 'item',
         formatter: (params: any) => `${params.name}<br/>${formatCompactMoney(params.value, 0)}`
       },
       legend: {
+        type: 'scroll',
         orient: 'vertical',
         right: 6,
         top: 'middle',
+        bottom: 8,
         itemWidth: 10,
         itemHeight: 10,
         textStyle: { color: '#9fb3d9', fontSize: 10 },
+        pageIconColor: '#00d9ff',
+        pageTextStyle: { color: '#9fb3d9' },
         formatter: (name: string) => (name.length > 16 ? `${name.slice(0, 16)}…` : name)
       },
       series: [
         {
           type: 'pie',
           radius: ['35%', '65%'],
-          center: ['35%', '50%'],
-          data: expenseStructure.map((item) => ({ name: item.label, value: item.value })),
+          center: ['32%', '50%'],
+          data: expenseData.map((item) => ({ name: item.label, value: item.value })),
           label: { show: false }
         }
       ]

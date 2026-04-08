@@ -625,12 +625,22 @@ export const MoneyPage = () => {
         trigger: 'item',
         formatter: (params: any) => `${params.name}<br/>${formatCompactMoney(params.value, 0)}`
       },
+      legend: {
+        orient: 'vertical',
+        right: 6,
+        top: 'middle',
+        itemWidth: 10,
+        itemHeight: 10,
+        textStyle: { color: '#9fb3d9', fontSize: 10 },
+        formatter: (name: string) => (name.length > 16 ? `${name.slice(0, 16)}…` : name)
+      },
       series: [
         {
           type: 'pie',
           radius: ['35%', '65%'],
+          center: ['35%', '50%'],
           data: expenseStructure.map((item) => ({ name: item.label, value: item.value })),
-          label: { color: '#d7e4ff' }
+          label: { show: false }
         }
       ]
     };

@@ -58,7 +58,7 @@ select {
 }
 
 .sidebar__brand {
-  padding: 36px 30px 28px;
+  padding: 28px 24px 22px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -66,7 +66,7 @@ select {
   margin: 0 0 14px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  font-size: 34px;
+  font-size: 28px;
   line-height: 1.04;
   letter-spacing: -0.02em;
 }
@@ -74,36 +74,43 @@ select {
 .sidebar__subtitle {
   margin: 0;
   color: var(--text-muted);
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.35;
 }
 
 .nav {
-  padding: 18px 0;
+  padding: 16px 0;
 }
 
 .nav__link {
-  display: block;
-  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 6px 18px;
+  padding: 12px 18px;
   color: #95aed3;
   font-family: 'Inter', sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 1.08;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.1;
   letter-spacing: 0.02em;
-  border-left: 4px solid transparent;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  border-radius: 999px;
+  border: 1px solid rgba(78, 110, 152, 0.35);
+  background: rgba(12, 24, 46, 0.7);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .nav__link:hover {
-  color: #cde6ff;
-  background: rgba(24, 62, 101, 0.35);
+  color: #d9f0ff;
+  border-color: rgba(0, 217, 255, 0.45);
+  background: linear-gradient(180deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.03));
 }
 
 .nav__link.is-active {
-  color: var(--accent);
-  border-left-color: var(--accent);
-  background: linear-gradient(90deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.02));
+  color: #e6f9ff;
+  border-color: rgba(0, 217, 255, 0.6);
+  background: linear-gradient(180deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.04));
+  box-shadow: 0 0 0 2px rgba(0, 217, 255, 0.18);
 }
 
 .shell {
@@ -113,12 +120,12 @@ select {
 }
 
 .topbar {
-  min-height: 92px;
+  min-height: 80px;
   border-bottom: 1px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 0 24px;
   background: linear-gradient(180deg, rgba(7, 20, 46, 0.92), rgba(10, 24, 48, 0.7));
   gap: 16px;
 }
@@ -126,7 +133,7 @@ select {
 .topbar__title {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
+  font-size: 32px;
   line-height: 1.1;
   letter-spacing: -0.02em;
   font-weight: 800;

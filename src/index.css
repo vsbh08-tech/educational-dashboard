@@ -208,6 +208,7 @@ select {
 .grid {
   display: grid;
   gap: 14px;
+  min-width: 0;
 }
 
 .grid--auto {
@@ -240,6 +241,7 @@ select {
   border-radius: 16px;
   padding: 16px;
   box-shadow: var(--shadow-soft);
+  min-width: 0;
 }
 
 .field {
@@ -298,6 +300,17 @@ select {
   width: 100%;
   border-collapse: collapse;
   font-size: 12px;
+}
+
+.table-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.table-scroll .table {
+  min-width: 640px;
 }
 
 .table th,

@@ -758,7 +758,7 @@ export const MoneyPage = () => {
           <h3 className="section-title">Отчет по статьям</h3>
           <span className="badge">Клик по ячейке → провал в операции</span>
         </div>
-        <div style={{ overflow: 'auto', maxHeight: 520 }}>
+        <div className="table-scroll" style={{ maxHeight: 520 }}>
           <table className="table">
             <thead>
               <tr>

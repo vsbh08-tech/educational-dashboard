@@ -578,49 +578,53 @@ export const ProfitPage = () => {
       <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 16 }}>
         <div className="panel">
           <h3 className="section-title">Проекты: Стройка</h3>
-          <table className="table">
-            <thead>
-              <tr>
-                <th>Проект</th>
-                <th>Выручка</th>
-                <th>Валовая прибыль</th>
-                <th>Рентабельность</th>
-              </tr>
-            </thead>
-            <tbody>
-              {projectTables.construction.map((row) => (
-                <tr key={row.project}>
-                  <td>{row.project}</td>
-                  <td>{formatCompactMoney(row.revenue)}</td>
-                  <td>{formatCompactMoney(row.gross)}</td>
-                  <td>{formatPercent(row.profitability)}</td>
+          <div className="table-scroll">
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>Проект</th>
+                  <th>Выручка</th>
+                  <th>Валовая прибыль</th>
+                  <th>Рентабельность</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {projectTables.construction.map((row) => (
+                  <tr key={row.project}>
+                    <td>{row.project}</td>
+                    <td>{formatCompactMoney(row.revenue)}</td>
+                    <td>{formatCompactMoney(row.gross)}</td>
+                    <td>{formatPercent(row.profitability)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
         <div className="panel">
           <h3 className="section-title">Проекты: Ремонт</h3>
-          <table className="table">
-            <thead>
-              <tr>
-                <th>Проект</th>
-                <th>Выручка</th>
-                <th>Валовая прибыль</th>
-                <th>Рентабельность</th>
-              </tr>
-            </thead>
-            <tbody>
-              {projectTables.repair.map((row) => (
-                <tr key={row.project}>
-                  <td>{row.project}</td>
-                  <td>{formatCompactMoney(row.revenue)}</td>
-                  <td>{formatCompactMoney(row.gross)}</td>
-                  <td>{formatPercent(row.profitability)}</td>
+          <div className="table-scroll">
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>Проект</th>
+                  <th>Выручка</th>
+                  <th>Валовая прибыль</th>
+                  <th>Рентабельность</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {projectTables.repair.map((row) => (
+                  <tr key={row.project}>
+                    <td>{row.project}</td>
+                    <td>{formatCompactMoney(row.revenue)}</td>
+                    <td>{formatCompactMoney(row.gross)}</td>
+                    <td>{formatPercent(row.profitability)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

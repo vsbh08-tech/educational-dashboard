@@ -28,10 +28,6 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <div className="shell">
         <header className="topbar">
           <h2 className="topbar__title">{title}</h2>
-          <div className="topbar__actions">
-            <button className="btn" type="button">Настройки</button>
-            <button className="btn" type="button">Выход</button>
-          </div>
         </header>
         <main className="main">
           <section className="content-card">{children}</section>

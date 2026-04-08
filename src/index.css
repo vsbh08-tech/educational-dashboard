@@ -468,7 +468,7 @@ select {
   margin: 0 0 14px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  font-size: 34px;
+  font-size: 26px;
   line-height: 1.04;
   letter-spacing: -0.02em;
 }
@@ -499,7 +499,7 @@ select {
   .topbar__title {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 1.1;
   letter-spacing: -0.02em;
   font-weight: 800;
@@ -553,28 +553,55 @@ select {
     padding: 18px 14px;
   }
 
+  .sidebar__title {
+    font-size: 22px;
+  }
+
+  .sidebar__subtitle {
+    font-size: 12px;
+  }
+
   .nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6px;
-    padding: 8px;
+    gap: 8px;
+    padding: 10px 12px 14px;
+    border-bottom: 1px solid var(--border-color);
   }
 
   .nav__link {
-  display: block;
-  padding: 18px 30px;
-  color: #95aed3;
-  font-family: 'Inter', sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: 0.02em;
-  border-left: 4px solid transparent;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    color: #95aed3;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 999px;
+    border: 1px solid rgba(78, 110, 152, 0.45);
+    background: rgba(12, 24, 46, 0.7);
+    position: relative;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
   .nav__link.is-active {
-    border-bottom-color: var(--accent);
+    color: #dff5ff;
+    border-color: rgba(0, 217, 255, 0.6);
+    background: linear-gradient(180deg, rgba(0, 217, 255, 0.18), rgba(0, 217, 255, 0.05));
+    box-shadow: 0 0 0 2px rgba(0, 217, 255, 0.18);
+  }
+
+  .nav__link.is-active::after {
+    content: '';
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: -6px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--accent);
   }
 
   .topbar__actions {
@@ -595,6 +622,10 @@ select {
 
   .kpi-meta {
     font-size: 10px;
+  }
+
+  .topbar__title {
+    font-size: 22px;
   }
 }
 
